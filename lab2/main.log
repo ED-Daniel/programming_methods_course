@@ -1,0 +1,97 @@
+2024-05-12 21:12:17.558 | INFO     | __main__:compare_search_time:27 - 100 - age
+2024-05-12 21:12:17.558 | INFO     | __main__:compare_search_time:38 - Binary time: 1.0013580322265625e-05
+2024-05-12 21:12:17.558 | INFO     | __main__:compare_search_time:49 - Hash time: 9.5367431640625e-07
+2024-05-12 21:12:17.558 | INFO     | __main__:compare_search_time:62 - Red black tree time: 1.0967254638671875e-05
+2024-05-12 21:12:17.559 | INFO     | __main__:compare_search_time:27 - 1000 - name
+2024-05-12 21:12:17.575 | INFO     | __main__:compare_search_time:38 - Binary time: 0.0003261566162109375
+2024-05-12 21:12:17.575 | INFO     | __main__:compare_search_time:49 - Hash time: 3.0994415283203125e-06
+2024-05-12 21:12:17.577 | INFO     | __main__:compare_search_time:62 - Red black tree time: 7.581710815429688e-05
+2024-05-12 21:12:17.580 | INFO     | __main__:compare_search_time:27 - 5000 - name
+2024-05-12 21:12:17.861 | INFO     | __main__:compare_search_time:38 - Binary time: 0.0029489994049072266
+2024-05-12 21:12:17.863 | INFO     | __main__:compare_search_time:49 - Hash time: 9.5367431640625e-07
+2024-05-12 21:12:17.872 | INFO     | __main__:compare_search_time:62 - Red black tree time: 0.00041675567626953125
+2024-05-12 21:12:17.878 | INFO     | __main__:compare_search_time:27 - 10000 - age
+2024-05-12 21:12:19.016 | INFO     | __main__:compare_search_time:38 - Binary time: 0.007983922958374023
+2024-05-12 21:12:19.019 | INFO     | __main__:compare_search_time:49 - Hash time: 0.0
+2024-05-12 21:12:19.038 | INFO     | __main__:compare_search_time:62 - Red black tree time: 0.0007169246673583984
+2024-05-12 21:12:19.078 | INFO     | __main__:compare_search_time:27 - 50000 - country
+2024-05-12 21:12:46.929 | INFO     | __main__:compare_search_time:38 - Binary time: 0.18342924118041992
+2024-05-12 21:12:46.958 | INFO     | __main__:compare_search_time:49 - Hash time: 1.9073486328125e-06
+2024-05-12 21:12:47.079 | INFO     | __main__:compare_search_time:62 - Red black tree time: 0.003831624984741211
+2024-05-12 21:12:47.486 | INFO     | __main__:compare_search_time:27 - 750000 - name
+2024-05-12 22:21:52.885 | INFO     | __main__:compare_search_time:27 - 100 - name
+2024-05-12 22:21:52.886 | INFO     | __main__:compare_search_time:41 - Binary time: 1.2874603271484375e-05
+2024-05-12 22:21:52.886 | INFO     | __main__:compare_search_time:52 - Hash time: 1.1920928955078125e-06
+2024-05-12 22:21:52.886 | INFO     | __main__:compare_search_time:65 - Red black tree time: 1.1920928955078125e-05
+2024-05-12 22:21:52.888 | INFO     | __main__:compare_search_time:27 - 1000 - country
+2024-05-12 22:21:52.907 | INFO     | __main__:compare_search_time:41 - Binary time: 0.000225067138671875
+2024-05-12 22:21:52.907 | INFO     | __main__:compare_search_time:52 - Hash time: 1.9073486328125e-06
+2024-05-12 22:21:52.909 | INFO     | __main__:compare_search_time:65 - Red black tree time: 7.605552673339844e-05
+2024-05-12 22:21:52.911 | INFO     | __main__:compare_search_time:27 - 5000 - name
+2024-05-12 22:21:53.204 | INFO     | __main__:compare_search_time:41 - Binary time: 0.0024340152740478516
+2024-05-12 22:21:53.205 | INFO     | __main__:compare_search_time:52 - Hash time: 0.0
+2024-05-12 22:21:53.215 | INFO     | __main__:compare_search_time:65 - Red black tree time: 0.00045490264892578125
+2024-05-12 22:21:53.221 | INFO     | __main__:compare_search_time:27 - 10000 - age
+2024-05-12 22:21:54.349 | INFO     | __main__:compare_search_time:41 - Binary time: 0.008378744125366211
+2024-05-12 22:21:54.351 | INFO     | __main__:compare_search_time:52 - Hash time: 9.5367431640625e-07
+2024-05-12 22:21:54.371 | INFO     | __main__:compare_search_time:65 - Red black tree time: 0.0007312297821044922
+2024-05-12 22:21:54.413 | INFO     | __main__:compare_search_time:27 - 50000 - country
+2024-05-12 22:22:04.580 | INFO     | __main__:compare_search_time:41 - Binary time: 0.06603002548217773
+2024-05-12 22:22:04.625 | INFO     | __main__:compare_search_time:52 - Hash time: 2.86102294921875e-06
+2024-05-12 22:22:04.760 | INFO     | __main__:compare_search_time:65 - Red black tree time: 0.0036950111389160156
+2024-05-12 22:22:05.182 | INFO     | __main__:compare_search_time:27 - 750000 - age
+2024-05-12 22:22:15.268 | INFO     | __main__:compare_search_time:41 - Binary time: 0.0652458667755127
+2024-05-12 22:22:15.727 | INFO     | __main__:compare_search_time:52 - Hash time: 3.814697265625e-06
+2024-05-12 22:22:18.023 | INFO     | __main__:compare_search_time:65 - Red black tree time: 0.05992412567138672
+2024-05-12 22:22:18.110 | INFO     | __main__:compare_search_time:27 - 100000 - name
+2024-05-12 22:22:55.522 | INFO     | __main__:compare_search_time:27 - 100 - country
+2024-05-12 22:22:55.523 | INFO     | __main__:compare_search_time:41 - Binary time: 1.3113021850585938e-05
+2024-05-12 22:22:55.523 | INFO     | __main__:compare_search_time:52 - Hash time: 7.152557373046875e-07
+2024-05-12 22:22:55.523 | INFO     | __main__:compare_search_time:65 - Red black tree time: 1.0967254638671875e-05
+2024-05-12 22:22:55.524 | INFO     | __main__:compare_search_time:27 - 1000 - country
+2024-05-12 22:22:55.535 | INFO     | __main__:compare_search_time:41 - Binary time: 0.00024819374084472656
+2024-05-12 22:22:55.535 | INFO     | __main__:compare_search_time:52 - Hash time: 9.5367431640625e-07
+2024-05-12 22:22:55.537 | INFO     | __main__:compare_search_time:65 - Red black tree time: 7.700920104980469e-05
+2024-05-12 22:22:55.540 | INFO     | __main__:compare_search_time:27 - 5000 - country
+2024-05-12 22:22:55.824 | INFO     | __main__:compare_search_time:41 - Binary time: 0.00232696533203125
+2024-05-12 22:22:55.825 | INFO     | __main__:compare_search_time:52 - Hash time: 1.1920928955078125e-06
+2024-05-12 22:22:55.834 | INFO     | __main__:compare_search_time:65 - Red black tree time: 0.00040602684020996094
+2024-05-12 22:22:55.840 | INFO     | __main__:compare_search_time:27 - 10000 - country
+2024-05-12 22:22:56.967 | INFO     | __main__:compare_search_time:41 - Binary time: 0.008496999740600586
+2024-05-12 22:22:56.969 | INFO     | __main__:compare_search_time:52 - Hash time: 0.0
+2024-05-12 22:22:56.989 | INFO     | __main__:compare_search_time:65 - Red black tree time: 0.0007307529449462891
+2024-05-12 22:22:57.028 | INFO     | __main__:compare_search_time:27 - 50000 - country
+2024-05-12 22:23:24.676 | INFO     | __main__:compare_search_time:41 - Binary time: 0.18332314491271973
+2024-05-12 22:23:24.706 | INFO     | __main__:compare_search_time:52 - Hash time: 2.86102294921875e-06
+2024-05-12 22:23:24.821 | INFO     | __main__:compare_search_time:65 - Red black tree time: 0.0038547515869140625
+2024-05-12 22:23:25.229 | INFO     | __main__:compare_search_time:27 - 750000 - age
+2024-05-12 22:28:53.285 | INFO     | __main__:compare_search_time:27 - 100 - country
+2024-05-12 22:28:53.285 | INFO     | __main__:compare_search_time:44 - Binary time: 1.0967254638671875e-05
+2024-05-12 22:28:53.285 | INFO     | __main__:compare_search_time:55 - Hash time: 1.1920928955078125e-06
+2024-05-12 22:28:53.285 | INFO     | __main__:compare_search_time:68 - Red black tree time: 1.1205673217773438e-05
+2024-05-12 22:28:53.286 | INFO     | __main__:compare_search_time:27 - 1000 - country
+2024-05-12 22:28:53.297 | INFO     | __main__:compare_search_time:44 - Binary time: 0.0002281665802001953
+2024-05-12 22:28:53.297 | INFO     | __main__:compare_search_time:55 - Hash time: 1.1920928955078125e-06
+2024-05-12 22:28:53.299 | INFO     | __main__:compare_search_time:68 - Red black tree time: 7.605552673339844e-05
+2024-05-12 22:28:53.302 | INFO     | __main__:compare_search_time:27 - 5000 - name
+2024-05-12 22:28:53.577 | INFO     | __main__:compare_search_time:44 - Binary time: 0.0023412704467773438
+2024-05-12 22:28:53.578 | INFO     | __main__:compare_search_time:55 - Hash time: 9.5367431640625e-07
+2024-05-12 22:28:53.587 | INFO     | __main__:compare_search_time:68 - Red black tree time: 0.0003647804260253906
+2024-05-12 22:28:53.593 | INFO     | __main__:compare_search_time:27 - 10000 - name
+2024-05-12 22:28:54.699 | INFO     | __main__:compare_search_time:44 - Binary time: 0.008243799209594727
+2024-05-12 22:28:54.701 | INFO     | __main__:compare_search_time:55 - Hash time: 9.5367431640625e-07
+2024-05-12 22:28:54.720 | INFO     | __main__:compare_search_time:68 - Red black tree time: 0.0006988048553466797
+2024-05-12 22:28:54.757 | INFO     | __main__:compare_search_time:27 - 50000 - country
+2024-05-12 22:29:22.674 | INFO     | __main__:compare_search_time:44 - Binary time: 0.18179893493652344
+2024-05-12 22:29:22.709 | INFO     | __main__:compare_search_time:55 - Hash time: 4.0531158447265625e-06
+2024-05-12 22:29:22.825 | INFO     | __main__:compare_search_time:68 - Red black tree time: 0.004045963287353516
+2024-05-12 22:29:23.226 | INFO     | __main__:compare_search_time:27 - 750000 - name
+2024-05-12 22:30:03.030 | ERROR    | __main__:compare_search_time:40 - Max recursion depth
+2024-05-12 22:30:03.032 | INFO     | __main__:compare_search_time:44 - Binary time: 0.04665184020996094
+2024-05-12 22:30:03.425 | INFO     | __main__:compare_search_time:55 - Hash time: 2.86102294921875e-06
+2024-05-12 22:30:05.696 | INFO     | __main__:compare_search_time:68 - Red black tree time: 0.060957908630371094
+2024-05-12 22:30:05.779 | INFO     | __main__:compare_search_time:27 - 100000 - name
+2024-05-12 22:30:46.331 | ERROR    | __main__:compare_search_time:40 - Max recursion depth
+2024-05-12 22:30:46.334 | INFO     | __main__:compare_search_time:44 - Binary time: 0.006227970123291016
+2024-05-12 22:30:46.745 | INFO     | __main__:compare_search_time:55 - Hash time: 5.245208740234375e-06
+2024-05-12 22:30:46.970 | INFO     | __main__:compare_search_time:68 - Red black tree time: 0.007568836212158203
