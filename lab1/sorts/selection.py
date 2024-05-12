@@ -1,3 +1,20 @@
+"""
+Selection Sort Algorithm
+
+This function performs selection sort on a given array.
+
+Args:
+    arr (list): The array to be sorted.
+
+Returns:
+    list: The sorted array.
+
+Example:
+    >>> selection_sort([4, 2, 6, 1, 5])
+    [1, 2, 4, 5, 6]
+"""
+
+
 def selection_sort(arr):
     n = len(arr)
 

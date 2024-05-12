@@ -1,4 +1,27 @@
+"""
+This module contains functions for performing heap sort on an array.
+
+Functions:
+    - heapify(arr, n, i): Rearranges the subarray arr[i:] into a heap structure
+    - heap_sort(arr): Sorts the given array using heap sort algorithm.
+
+Example usage:
+    >>> arr = [4, 10, 3, 5, 1]
+    >>> heap_sort(arr)
+    >>> print(arr)
+    [1, 3, 4, 5, 10]
+"""
+
+
 def heapify(arr, n, i):
+    """
+    Rearranges the subarray arr[i:] into a heap structure.
+
+    Args:
+        arr (list): The input array.
+        n (int): The size of the array.
+        i (int): The index to start heapifying from.
+    """
     largest = i
     left = 2 * i + 1
     right = 2 * i + 2
@@ -15,6 +38,12 @@ def heapify(arr, n, i):
 
 
 def heap_sort(arr):
+    """
+    Sorts the given array using heap sort algorithm.
+
+    Args:
+        arr (list): The array to be sorted.
+    """
     n = len(arr)
 
     for i in range(n // 2 - 1, -1, -1):
