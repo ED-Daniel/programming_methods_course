@@ -10,6 +10,18 @@ class HashTable:
     def hash_function(self, key):
         return hash(key) % self.size
 
+    def hash_function_custom(self, key):
+        """Полиномиальная хеш-функция для строк."""
+        hash_value = 0
+        p = 31  # простое число
+        p_power = 1
+        for char in key:
+            hash_value = (
+                hash_value + (ord(char) - ord("a") + 1) * p_power
+            ) % self.size
+            p_power = (p_power * p) % self.size
+        return hash_value
+
     def insert(self, key, value):
         index = self.hash_function(key)
         self.table[index].append((key, value))
