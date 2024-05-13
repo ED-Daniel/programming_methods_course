@@ -179,3 +179,35 @@
 2024-05-13 13:17:50.149 | INFO     | __main__:compare_search_time:45 - Binary time: 9.489059448242188e-05
 2024-05-13 13:17:50.207 | INFO     | __main__:compare_search_time:56 - Hash time: 3.0994415283203125e-06
 2024-05-13 13:17:50.459 | INFO     | __main__:compare_search_time:69 - Red black tree time: 6.103515625e-05
+2024-05-13 13:38:33.057 | INFO     | __main__:compare_search_time:30 - 100 - bq
+2024-05-13 13:38:33.057 | INFO     | __main__:compare_search_time:47 - Binary time: 3.0994415283203125e-06
+2024-05-13 13:38:33.057 | INFO     | __main__:compare_search_time:58 - Hash time: 9.5367431640625e-07
+2024-05-13 13:38:33.058 | INFO     | __main__:compare_search_time:71 - Red black tree time: 1.9073486328125e-06
+2024-05-13 13:38:44.423 | INFO     | __main__:compare_search_time:30 - 100 - ww
+2024-05-13 13:38:44.424 | INFO     | __main__:compare_search_time:47 - Binary time: 3.0994415283203125e-06
+2024-05-13 13:38:44.424 | INFO     | __main__:compare_search_time:58 - Hash time: 1.1920928955078125e-06
+2024-05-13 13:38:44.424 | INFO     | __main__:compare_search_time:71 - Red black tree time: 1.9073486328125e-06
+2024-05-13 13:38:44.425 | INFO     | __main__:compare_search_time:30 - 1000 - tk
+2024-05-13 13:38:44.426 | INFO     | __main__:compare_search_time:47 - Binary time: 3.0994415283203125e-06
+2024-05-13 13:38:44.426 | INFO     | __main__:compare_search_time:58 - Hash time: 2.1457672119140625e-06
+2024-05-13 13:38:44.428 | INFO     | __main__:compare_search_time:71 - Red black tree time: 1.9073486328125e-06
+2024-05-13 13:38:44.431 | INFO     | __main__:compare_search_time:30 - 5000 - xl
+2024-05-13 13:38:44.438 | INFO     | __main__:compare_search_time:47 - Binary time: 1.811981201171875e-05
+2024-05-13 13:38:44.439 | INFO     | __main__:compare_search_time:58 - Hash time: 0.0
+2024-05-13 13:38:44.447 | INFO     | __main__:compare_search_time:71 - Red black tree time: 1.1920928955078125e-05
+2024-05-13 13:38:44.455 | INFO     | __main__:compare_search_time:30 - 10000 - ky
+2024-05-13 13:38:44.472 | INFO     | __main__:compare_search_time:47 - Binary time: 1.0967254638671875e-05
+2024-05-13 13:38:44.475 | INFO     | __main__:compare_search_time:58 - Hash time: 1.1920928955078125e-06
+2024-05-13 13:38:44.492 | INFO     | __main__:compare_search_time:71 - Red black tree time: 8.821487426757812e-06
+2024-05-13 13:38:44.531 | INFO     | __main__:compare_search_time:30 - 50000 - mo
+2024-05-13 13:38:44.668 | INFO     | __main__:compare_search_time:47 - Binary time: 5.0067901611328125e-05
+2024-05-13 13:38:44.709 | INFO     | __main__:compare_search_time:58 - Hash time: 1.6689300537109375e-06
+2024-05-13 13:38:44.805 | INFO     | __main__:compare_search_time:71 - Red black tree time: 3.0040740966796875e-05
+2024-05-13 13:38:44.875 | INFO     | __main__:compare_search_time:30 - 75000 - qf
+2024-05-13 13:38:45.198 | INFO     | __main__:compare_search_time:47 - Binary time: 7.486343383789062e-05
+2024-05-13 13:38:45.241 | INFO     | __main__:compare_search_time:58 - Hash time: 2.1457672119140625e-06
+2024-05-13 13:38:45.429 | INFO     | __main__:compare_search_time:71 - Red black tree time: 4.1961669921875e-05
+2024-05-13 13:38:45.490 | INFO     | __main__:compare_search_time:30 - 100000 - tj
+2024-05-13 13:38:46.150 | INFO     | __main__:compare_search_time:47 - Binary time: 9.608268737792969e-05
+2024-05-13 13:38:46.211 | INFO     | __main__:compare_search_time:58 - Hash time: 1.9073486328125e-06
+2024-05-13 13:38:46.465 | INFO     | __main__:compare_search_time:71 - Red black tree time: 5.91278076171875e-05

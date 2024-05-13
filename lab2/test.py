@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from algos.hash import count_collisions
 
 
-sizes = [100, 1000, 5000, 10000, 50000, 750000, 100000]
+sizes = [100, 1000, 5000, 10000, 50000, 75000, 100000]
 collisions = []
 
 for size in sizes:

@@ -6,6 +6,7 @@ from algos.bin_tree import BinarySearchTree
 from data.gen import generate_objects_array, generate_combinations
 from algos.hash import HashTable
 from algos.red_black_tree import RedBlackTree
+from algos.multimap import MultiMap
 
 from loguru import logger
 
@@ -19,6 +20,7 @@ def compare_search_time(sizes):
     binary_tree_time = []
     red_black_tree_time = []
     hashtable_time = []
+    multimap_time = []
     keys = generate_combinations()
 
     for size in sizes:
@@ -68,9 +70,19 @@ def compare_search_time(sizes):
 
         logger.info(f'Red black tree time: {red_black_tree_time[-1]}')
 
+        multimap = MultiMap()
+        for obj in objects:
+            multimap.insert(obj["key"], obj["value"])
+
+        multimap_start_time = time.time()
+        multimap.search(key)
+        multimap_end_time = time.time()
+        multimap_time.append(multimap_end_time - multimap_start_time)
+
     plt.plot(sizes, binary_tree_time, label="Binary Tree")
     plt.plot(sizes, red_black_tree_time, label="Red Black Tree")
     plt.plot(sizes, hashtable_time, label="Hash Table")
+    plt.plot(sizes, multimap_time, label="Multimap Table")
     plt.xlabel("Array Size")
     plt.ylabel("Search Time")
     plt.legend()
