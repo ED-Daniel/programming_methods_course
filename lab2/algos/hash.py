@@ -1,5 +1,7 @@
 import random
 
+from data.gen import generate_combinations
+
 
 # Реализация хэш таблицы
 class HashTable:
@@ -38,7 +40,7 @@ class HashTable:
 # ии и построение графика
 def count_collisions(size):
     hashtable = HashTable(size)
-    keys = ["name", "age", "country"]
+    keys = generate_combinations()
 
     for i in range(size):
         key = random.choice(keys)
