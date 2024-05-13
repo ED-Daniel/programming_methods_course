@@ -3,7 +3,7 @@ import time
 import matplotlib.pyplot as plt
 
 from algos.bin_tree import BinarySearchTree
-from data.gen import generate_objects_array
+from data.gen import generate_objects_array, generate_combinations
 from algos.hash import HashTable
 from algos.red_black_tree import RedBlackTree
 
@@ -19,10 +19,11 @@ def compare_search_time(sizes):
     binary_tree_time = []
     red_black_tree_time = []
     hashtable_time = []
+    keys = generate_combinations()
 
     for size in sizes:
         objects = generate_objects_array(size)
-        key = random.choice(["name", "age", "country"])
+        key = random.choice(keys)
 
         logger.info(f'{size} - {key}')
 
@@ -68,7 +69,7 @@ def compare_search_time(sizes):
         logger.info(f'Red black tree time: {red_black_tree_time[-1]}')
 
     plt.plot(sizes, binary_tree_time, label="Binary Tree")
-    plt.plot(sizes, red_black_tree_time, label="Binary Tree")
+    plt.plot(sizes, red_black_tree_time, label="Red Black Tree")
     plt.plot(sizes, hashtable_time, label="Hash Table")
     plt.xlabel("Array Size")
     plt.ylabel("Search Time")

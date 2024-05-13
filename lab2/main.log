@@ -95,3 +95,31 @@
 2024-05-12 22:30:46.334 | INFO     | __main__:compare_search_time:44 - Binary time: 0.006227970123291016
 2024-05-12 22:30:46.745 | INFO     | __main__:compare_search_time:55 - Hash time: 5.245208740234375e-06
 2024-05-12 22:30:46.970 | INFO     | __main__:compare_search_time:68 - Red black tree time: 0.007568836212158203
+2024-05-13 10:55:11.117 | INFO     | __main__:compare_search_time:28 - 100 - or
+2024-05-13 10:55:11.118 | INFO     | __main__:compare_search_time:45 - Binary time: 2.1457672119140625e-06
+2024-05-13 10:55:11.118 | INFO     | __main__:compare_search_time:56 - Hash time: 1.1920928955078125e-06
+2024-05-13 10:55:11.118 | INFO     | __main__:compare_search_time:69 - Red black tree time: 1.9073486328125e-06
+2024-05-13 10:55:11.119 | INFO     | __main__:compare_search_time:28 - 1000 - wy
+2024-05-13 10:55:11.120 | INFO     | __main__:compare_search_time:45 - Binary time: 1.9073486328125e-06
+2024-05-13 10:55:11.120 | INFO     | __main__:compare_search_time:56 - Hash time: 9.5367431640625e-07
+2024-05-13 10:55:11.122 | INFO     | __main__:compare_search_time:69 - Red black tree time: 1.1920928955078125e-06
+2024-05-13 10:55:11.125 | INFO     | __main__:compare_search_time:28 - 5000 - zp
+2024-05-13 10:55:11.131 | INFO     | __main__:compare_search_time:45 - Binary time: 7.867813110351562e-06
+2024-05-13 10:55:11.132 | INFO     | __main__:compare_search_time:56 - Hash time: 9.5367431640625e-07
+2024-05-13 10:55:11.140 | INFO     | __main__:compare_search_time:69 - Red black tree time: 1.0967254638671875e-05
+2024-05-13 10:55:11.145 | INFO     | __main__:compare_search_time:28 - 10000 - zd
+2024-05-13 10:55:11.158 | INFO     | __main__:compare_search_time:45 - Binary time: 1.0967254638671875e-05
+2024-05-13 10:55:11.161 | INFO     | __main__:compare_search_time:56 - Hash time: 3.0994415283203125e-06
+2024-05-13 10:55:11.178 | INFO     | __main__:compare_search_time:69 - Red black tree time: 1.0013580322265625e-05
+2024-05-13 10:55:11.219 | INFO     | __main__:compare_search_time:28 - 50000 - qj
+2024-05-13 10:55:11.356 | INFO     | __main__:compare_search_time:45 - Binary time: 3.3855438232421875e-05
+2024-05-13 10:55:11.395 | INFO     | __main__:compare_search_time:56 - Hash time: 2.1457672119140625e-06
+2024-05-13 10:55:11.495 | INFO     | __main__:compare_search_time:69 - Red black tree time: 2.7894973754882812e-05
+2024-05-13 10:55:11.896 | INFO     | __main__:compare_search_time:28 - 750000 - uv
+2024-05-13 10:56:23.947 | INFO     | __main__:compare_search_time:45 - Binary time: 0.0016999244689941406
+2024-05-13 10:56:24.469 | INFO     | __main__:compare_search_time:56 - Hash time: 5.7220458984375e-06
+2024-05-13 10:56:26.718 | INFO     | __main__:compare_search_time:69 - Red black tree time: 0.0005331039428710938
+2024-05-13 10:56:26.824 | INFO     | __main__:compare_search_time:28 - 100000 - ny
+2024-05-13 10:56:27.553 | INFO     | __main__:compare_search_time:45 - Binary time: 0.00017595291137695312
+2024-05-13 10:56:28.002 | INFO     | __main__:compare_search_time:56 - Hash time: 2.1457672119140625e-06
+2024-05-13 10:56:28.211 | INFO     | __main__:compare_search_time:69 - Red black tree time: 6.103515625e-05
