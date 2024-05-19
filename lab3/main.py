@@ -1,7 +1,6 @@
 import numpy as np
 import time
 import matplotlib.pyplot as plt
-from scipy.stats import chisquare
 
 
 class CustomMersenneTwister:
@@ -86,17 +85,21 @@ def calculate_statistics(samples):
     return statistics
 
 
-# Проверка на равномерность распределения (Хи-квадрат)
+# Собственная реализация Хи-квадрат теста
 def chi_square_test(samples, num_bins=10):
     test_results = []
     for sample in samples:
-        observed_freq, _ = np.histogram(
-            sample, bins=num_bins, range=(min(sample), max(sample))
-        )
+        observed_freq, _ = np.histogram(sample, bins=num_bins, range=(min(sample), max(sample)))
         expected_freq = [len(sample) / num_bins] * num_bins
-        chi2, p = chisquare(observed_freq, expected_freq)
+        chi2 = sum((o - e) ** 2 / e for o, e in zip(observed_freq, expected_freq))
+        p = chi2_p_value(chi2, num_bins - 1)
         test_results.append((chi2, p))
     return test_results
+
+
+def chi2_p_value(chi2, df):
+    from scipy.stats import gammaincc
+    return gammaincc(df / 2.0, chi2 / 2.0)
 
 
 # Проверка времени генерации чисел
