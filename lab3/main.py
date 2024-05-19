@@ -1,6 +1,8 @@
 import numpy as np
 import time
 import matplotlib.pyplot as plt
+from scipy.stats import chisquare
+from nistrng import check_eligibility_all_battery, SP800_22R1A_BATTERY, run_all_battery
 
 
 class CustomMersenneTwister:
@@ -85,21 +87,17 @@ def calculate_statistics(samples):
     return statistics
 
 
-# Собственная реализация Хи-квадрат теста
+# Проверка на равномерность распределения (Хи-квадрат)
 def chi_square_test(samples, num_bins=10):
     test_results = []
     for sample in samples:
-        observed_freq, _ = np.histogram(sample, bins=num_bins, range=(min(sample), max(sample)))
+        observed_freq, _ = np.histogram(
+            sample, bins=num_bins, range=(min(sample), max(sample))
+        )
         expected_freq = [len(sample) / num_bins] * num_bins
-        chi2 = sum((o - e) ** 2 / e for o, e in zip(observed_freq, expected_freq))
-        p = chi2_p_value(chi2, num_bins - 1)
+        chi2, p = chisquare(observed_freq, expected_freq)
         test_results.append((chi2, p))
     return test_results
-
-
-def chi2_p_value(chi2, df):
-    from scipy.stats import gammaincc
-    return gammaincc(df / 2.0, chi2 / 2.0)
 
 
 # Проверка времени генерации чисел
@@ -142,6 +140,25 @@ def save_statistics_to_file(
             file.write(f"Sample {i+1}: Chi2={chi2}, p-value={p}\n")
 
 
+# Проверка с помощью тестов NIST
+def run_nist_tests(data):
+    arr = np.array(data)
+    eligible_battery: dict = check_eligibility_all_battery(arr, SP800_22R1A_BATTERY)
+
+    print("Eligible test from NIST-SP800-22r1a:")
+    for name in eligible_battery.keys():
+        print("\t" + name)
+
+    results = run_all_battery(arr, eligible_battery, False)
+
+    print("Test results:")
+    for result, elapsed_time in results:
+        if result.passed:
+            print("\tPASSED - score: " + str(np.round(result.score, 3)) + " - " + result.name + " - elapsed time: " + str(elapsed_time) + " ms")
+        else:
+            print("\tFAILED - score: " + str(np.round(result.score, 3)) + " - " + result.name + " - elapsed time: " + str(elapsed_time) + " ms")
+
+
 # Основная функция
 def main():
     # Создаем генераторы
@@ -181,6 +198,14 @@ def main():
     lcg_times = benchmark(lcg, sizes)
     custom_mt_times = benchmark(custom_mt, sizes)
     np_times = benchmark(np.random, sizes)
+
+    print("NIST TEST FOR 10 000")
+    run_nist_tests([round(lcg.random() * 100) for _ in range(10000)])
+    run_nist_tests([round(custom_mt.random() * 100) for _ in range(10000)])
+
+    print("NIST TEST FOR 100 000")
+    run_nist_tests([round(lcg.random() * 100) for _ in range(100000)])
+    run_nist_tests([round(custom_mt.random() * 100) for _ in range(100000)])
 
     # Построение графиков
     plt.figure()
