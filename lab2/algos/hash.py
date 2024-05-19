@@ -35,6 +35,13 @@ class HashTable:
                 return item[1]
         return None
 
+    def search_value(self, key, value):
+        index = self.hash_function(key)
+        for item in self.table[index]:
+            if item[0] == key and item[1] == value:
+                return item[1]
+        return None
+
 
 # Подсчет числа коллизий хэш функц
 # ии и построение графика

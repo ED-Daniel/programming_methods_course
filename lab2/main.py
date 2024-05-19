@@ -51,7 +51,9 @@ def compare_search_time(sizes):
             hashtable.insert(obj["key"], obj["value"])
 
         hashtable_start_time = time.time()
-        hashtable.search(key)
+
+        rnd_obj = random.choice(objects)
+        hashtable.search_value(rnd_obj["key"], rnd_obj["value"])
         hashtable_end_time = time.time()
         hashtable_time.append(hashtable_end_time - hashtable_start_time)
 
