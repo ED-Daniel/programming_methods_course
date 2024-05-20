@@ -1,0 +1,96 @@
+NIST TEST FOR 10 000
+Eligible test from NIST-SP800-22r1a:
+        monobit
+        frequency_within_block
+        longest_run_ones_in_a_block
+        dft
+        non_overlapping_template_matching
+        serial
+        approximate_entropy
+        cumulative sums
+        random_excursion
+        random_excursion_variant
+Test results:
+        FAILED - score: 0.0 - Monobit - elapsed time: 0 ms
+        FAILED - score: 0.0 - Frequency Within Block - elapsed time: 0 ms
+        FAILED - score: 0.0 - Longest Run Ones In A Block - elapsed time: 0 ms
+        FAILED - score: 0.0 - Discrete Fourier Transform - elapsed time: 1 ms
+        FAILED - score: 0.0 - Non Overlapping Template Matching - elapsed time: 12 ms
+        PASSED - score: 1.0 - Serial - elapsed time: 118 ms
+        FAILED - score: 0.0 - Approximate Entropy - elapsed time: 79 ms
+        PASSED - score: 1.0 - Cumulative Sums - elapsed time: 4 ms
+        PASSED - score: 0.957 - Random Excursion - elapsed time: 13 ms
+/Users/danielemelyanenko/Documents/Studying/programming-methods/.venv/lib/python3.12/site-packages/nistrng/test.py:47: RuntimeWarning: Mean of empty slice
+  return float(numpy.nanmean(self._score_list))
+        PASSED - score: nan - Random Excursion Variant - elapsed time: 1 ms
+Eligible test from NIST-SP800-22r1a:
+        monobit
+        frequency_within_block
+        longest_run_ones_in_a_block
+        dft
+        non_overlapping_template_matching
+        serial
+        approximate_entropy
+        cumulative sums
+        random_excursion
+        random_excursion_variant
+Test results:
+        FAILED - score: 0.0 - Monobit - elapsed time: 0 ms
+        FAILED - score: 0.0 - Frequency Within Block - elapsed time: 1 ms
+        FAILED - score: 0.0 - Longest Run Ones In A Block - elapsed time: 0 ms
+        FAILED - score: 0.0 - Discrete Fourier Transform - elapsed time: 1 ms
+        FAILED - score: 0.0 - Non Overlapping Template Matching - elapsed time: 10 ms
+        PASSED - score: 1.0 - Serial - elapsed time: 116 ms
+        FAILED - score: 0.0 - Approximate Entropy - elapsed time: 87 ms
+        PASSED - score: 1.0 - Cumulative Sums - elapsed time: 5 ms
+        PASSED - score: 0.957 - Random Excursion - elapsed time: 15 ms
+        PASSED - score: nan - Random Excursion Variant - elapsed time: 0 ms
+NIST TEST FOR 100 000
+Eligible test from NIST-SP800-22r1a:
+        monobit
+        frequency_within_block
+        longest_run_ones_in_a_block
+        binary_matrix_rank
+        dft
+        non_overlapping_template_matching
+        serial
+        approximate_entropy
+        cumulative sums
+        random_excursion
+        random_excursion_variant
+Test results:
+        FAILED - score: 0.0 - Monobit - elapsed time: 0 ms
+        FAILED - score: 0.0 - Frequency Within Block - elapsed time: 0 ms
+        FAILED - score: 0.0 - Longest Run Ones In A Block - elapsed time: 0 ms
+        FAILED - score: 0.0 - Binary Matrix Rank - elapsed time: 57 ms
+        FAILED - score: 0.0 - Discrete Fourier Transform - elapsed time: 2 ms
+        FAILED - score: 0.0 - Non Overlapping Template Matching - elapsed time: 111 ms
+        FAILED - score: 0.041 - Serial - elapsed time: 1185 ms
+        FAILED - score: 0.0 - Approximate Entropy - elapsed time: 857 ms
+        PASSED - score: 1.0 - Cumulative Sums - elapsed time: 38 ms
+        PASSED - score: 0.957 - Random Excursion - elapsed time: 131 ms
+        PASSED - score: nan - Random Excursion Variant - elapsed time: 1 ms
+Eligible test from NIST-SP800-22r1a:
+        monobit
+        frequency_within_block
+        longest_run_ones_in_a_block
+        binary_matrix_rank
+        dft
+        non_overlapping_template_matching
+        serial
+        approximate_entropy
+        cumulative sums
+        random_excursion
+        random_excursion_variant
+Test results:
+        FAILED - score: 0.0 - Monobit - elapsed time: 1 ms
+        FAILED - score: 0.0 - Frequency Within Block - elapsed time: 4 ms
+        FAILED - score: 0.0 - Longest Run Ones In A Block - elapsed time: 3 ms
+        FAILED - score: 0.0 - Binary Matrix Rank - elapsed time: 58 ms
+        FAILED - score: 0.0 - Discrete Fourier Transform - elapsed time: 4 ms
+        FAILED - score: 0.0 - Non Overlapping Template Matching - elapsed time: 137 ms
+        PASSED - score: 1.0 - Serial - elapsed time: 1160 ms
+        FAILED - score: 0.0 - Approximate Entropy - elapsed time: 801 ms
+        PASSED - score: 1.0 - Cumulative Sums - elapsed time: 39 ms
+        PASSED - score: 0.957 - Random Excursion - elapsed time: 127 ms
+        PASSED - score: nan - Random Excursion Variant - elapsed time: 2 ms
