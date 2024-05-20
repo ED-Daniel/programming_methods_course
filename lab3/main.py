@@ -5,47 +5,15 @@ from scipy.stats import chisquare
 from nistrng import check_eligibility_all_battery, SP800_22R1A_BATTERY, run_all_battery
 
 
-class CustomMersenneTwister:
+class SimpleRandom:
     def __init__(self, seed=5489):
-        self.N = 624
-        self.M = 397
-        self.MATRIX_A = 0x9908B0DF
-        self.UPPER_MASK = 0x80000000
-        self.LOWER_MASK = 0x7FFFFFFF
-        self.mt = [0] * self.N
-        self.mti = self.N + 1
-        self.seed_mt(seed)
-
-    def seed_mt(self, seed):
-        self.mt[0] = seed & 0xFFFFFFFF
-        for i in range(1, self.N):
-            self.mt[i] = (
-                1812433253 * (self.mt[i - 1] ^ (self.mt[i - 1] >> 30)) + i
-            ) & 0xFFFFFFFF
+        self.seed = seed
 
     def random(self):
-        if self.mti >= self.N:
-            self.twist()
-
-        y = self.mt[self.mti]
-        self.mti += 1
-
-        y ^= y >> 11
-        y ^= (y << 7) & 0x9D2C5680
-        y ^= (y << 15) & 0xEFC60000
-        y ^= y >> 18
-
-        return y / 0xFFFFFFFF
-
-    def twist(self):
-        for i in range(self.N):
-            y = (self.mt[i] & self.UPPER_MASK) | (
-                self.mt[(i + 1) % self.N] & self.LOWER_MASK
-            )
-            self.mt[i] = self.mt[(i + self.M) % self.N] ^ (y >> 1)
-            if y % 2 != 0:
-                self.mt[i] ^= self.MATRIX_A
-        self.mti = 0
+        self.seed ^= (self.seed << 20)
+        self.seed ^= (self.seed >> 35)
+        self.seed ^= (self.seed << 5)
+        return self.seed % 100
 
 
 # Линейный конгруэнтный генератор (LCG)
@@ -104,6 +72,7 @@ def chi_square_test(samples, num_bins=10):
 def benchmark(generator, sizes):
     times = []
     for size in sizes:
+        print(f"Benchmarked: {size}")
         start_time = time.time()
         [generator.random() for _ in range(size)]
         end_time = time.time()
@@ -163,11 +132,11 @@ def run_nist_tests(data):
 def main():
     # Создаем генераторы
     lcg = LCG(seed=12345)
-    custom_mt = CustomMersenneTwister(seed=12345)
+    simple_rnd = SimpleRandom(seed=12345)
 
     # Генерация выборок
     lcg_samples = generate_samples(lcg)
-    custom_mt_samples = generate_samples(custom_mt)
+    custom_mt_samples = generate_samples(simple_rnd)
 
     # Рассчет статистики
     lcg_statistics = calculate_statistics(lcg_samples)
@@ -180,37 +149,37 @@ def main():
     # Вывод и сохранение статистики
     print_statistics("LCG", lcg_statistics, lcg_chi2)
     print_statistics(
-        "Custom Mersenne Twister", custom_mt_statistics, custom_mt_chi2
+        "Simple Random", custom_mt_statistics, custom_mt_chi2
     )
 
     save_statistics_to_file(
         "lcg_statistics.txt", "LCG", lcg_statistics, lcg_chi2
     )
     save_statistics_to_file(
-        "custom_mt_statistics.txt",
-        "Custom Mersenne Twister",
+        "simple_rnd_statistics.txt",
+        "Simple Random",
         custom_mt_statistics,
         custom_mt_chi2,
     )
 
     # Проверка времени генерации чисел
-    sizes = [1000, 10000, 100000, 1000000]
+    sizes = [100, 1000, 10000, 100000]
     lcg_times = benchmark(lcg, sizes)
-    custom_mt_times = benchmark(custom_mt, sizes)
+    custom_mt_times = benchmark(simple_rnd, sizes)
     np_times = benchmark(np.random, sizes)
 
     print("NIST TEST FOR 10 000")
     run_nist_tests([round(lcg.random() * 100) for _ in range(10000)])
-    run_nist_tests([round(custom_mt.random() * 100) for _ in range(10000)])
+    run_nist_tests([round(simple_rnd.random() * 100) for _ in range(10000)])
 
     print("NIST TEST FOR 100 000")
     run_nist_tests([round(lcg.random() * 100) for _ in range(100000)])
-    run_nist_tests([round(custom_mt.random() * 100) for _ in range(100000)])
+    run_nist_tests([round(simple_rnd.random() * 100) for _ in range(100000)])
 
     # Построение графиков
     plt.figure()
     plt.plot(sizes, lcg_times, label="LCG")
-    plt.plot(sizes, custom_mt_times, label="Custom Mersenne Twister")
+    plt.plot(sizes, custom_mt_times, label="Simple Random")
     plt.plot(sizes, np_times, label="NumPy Random")
     plt.xlabel("Size of Samples")
     plt.ylabel("Generation Time (seconds)")
